@@ -1,9 +1,10 @@
-package com.example.foodapp
+package com.example.foodapp.activities
 
 import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.foodapp.R
 
 open class BaseActivity : AppCompatActivity() {
     private var dialog: Dialog? = null

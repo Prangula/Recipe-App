@@ -1,14 +1,13 @@
-package com.example.foodapp
+package com.example.foodapp.activities
 
 import android.content.Intent
 import android.graphics.drawable.AnimationDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.CountDownTimer
 import android.os.Handler
-import com.example.foodapp.ui.dashboard.HomeFragment
+import com.example.foodapp.FirestoreClass
+import com.example.foodapp.R
 import kotlinx.android.synthetic.main.activity_splash_screen.*
-import kotlin.random.Random
 
 class SplashScreen : AppCompatActivity() {
 
@@ -28,7 +27,7 @@ class SplashScreen : AppCompatActivity() {
 
             if(FirestoreClass().getCurrentUserId().isNotEmpty()){
 
-                val intent = Intent(this,NavigationActivity::class.java)
+                val intent = Intent(this, NavigationActivity::class.java)
                 startActivity(intent)
                 finish()
             }

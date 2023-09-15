@@ -1,16 +1,12 @@
-package com.example.foodapp
+package com.example.foodapp.activities
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.foodapp.R
 import com.example.foodapp.databinding.ActivityNavigationBinding
-import com.google.firebase.firestore.auth.User
-import kotlinx.android.synthetic.main.activity_navigation.*
-import kotlinx.android.synthetic.main.fragment_profile.*
 
 class NavigationActivity : BaseActivity() {
 

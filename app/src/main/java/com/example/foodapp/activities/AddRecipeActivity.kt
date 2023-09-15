@@ -1,4 +1,4 @@
-package com.example.foodapp
+package com.example.foodapp.activities
 
 import android.app.Activity
 import android.app.AlertDialog
@@ -6,18 +6,20 @@ import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.provider.Settings
 import com.bumptech.glide.Glide
+import com.example.foodapp.Constants
+import com.example.foodapp.FirestoreClass
+import com.example.foodapp.R
+import com.example.foodapp.models.Recipe
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import kotlinx.android.synthetic.main.activity_add_recipe.*
-import kotlinx.android.synthetic.main.activity_register.*
 
 class AddRecipeActivity : BaseActivity() {
 
@@ -87,7 +89,7 @@ class AddRecipeActivity : BaseActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if(resultCode== Activity.RESULT_OK&&requestCode== GALLERY&&data!!.data!=null){
+        if(resultCode== Activity.RESULT_OK&&requestCode== GALLERY &&data!!.data!=null){
 
             imageUri = data!!.data!!
 
@@ -233,7 +235,9 @@ class AddRecipeActivity : BaseActivity() {
             )
 
             FirestoreClass().registerRecipe(this@AddRecipeActivity,recipe)
-            FirestoreClass().uploadImageToCloudStorage(this@AddRecipeActivity,imageUri!!,Constants.RECIPEIMAGE)
+            FirestoreClass().uploadImageToCloudStorage(this@AddRecipeActivity,imageUri!!,
+                Constants.RECIPEIMAGE
+            )
         }else{
 
             toast()

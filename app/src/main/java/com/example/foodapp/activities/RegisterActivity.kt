@@ -1,21 +1,21 @@
-package com.example.foodapp
+package com.example.foodapp.activities
 
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
-import android.provider.MediaStore.Images.Media
 import android.provider.Settings
 import android.widget.Toast
-import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
+import com.example.foodapp.Constants
+import com.example.foodapp.FirestoreClass
+import com.example.foodapp.R
+import com.example.foodapp.models.Users1
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.firestore.auth.User
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
@@ -101,7 +101,7 @@ class RegisterActivity : BaseActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if(resultCode== Activity.RESULT_OK&&requestCode== GALLERY&&data!!.data!=null){
+        if(resultCode== Activity.RESULT_OK&&requestCode== GALLERY &&data!!.data!=null){
 
            imageUri = data!!.data!!
 
@@ -135,7 +135,9 @@ companion object{
                 gender = "ქალი"
             }
 
-            FirestoreClass().uploadImageToCloudStorage(this@RegisterActivity,imageUri!!,Constants.IMAGE)
+            FirestoreClass().uploadImageToCloudStorage(this@RegisterActivity,imageUri!!,
+                Constants.IMAGE
+            )
 
             showDialog()
 

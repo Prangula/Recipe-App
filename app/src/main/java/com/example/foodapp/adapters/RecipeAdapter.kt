@@ -1,28 +1,35 @@
-package com.example.foodapp
+package com.example.foodapp.adapters
 
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.foodapp.databinding.MyrecipeitemBinding
-import com.example.foodapp.ui.home.MyRecipeFragment
+import com.example.foodapp.Constants
+import com.example.foodapp.models.Recipe
+import com.example.foodapp.activities.DetailActivity
+import com.example.foodapp.databinding.RecipeitemBinding
+import com.example.foodapp.ui.dashboard.HomeFragment
 
-class MyRecipeAdapter(private val items:ArrayList<Recipe>,
-private val fragment:MyRecipeFragment)
-    :RecyclerView.Adapter<MyRecipeAdapter.ViewHolder>(){
+class RecipeAdapter(private val items:ArrayList<Recipe>,
+                    private val fragment:HomeFragment)
+    :RecyclerView.Adapter<RecipeAdapter.ViewHolder>(){
 
 
-        inner class ViewHolder(binding:MyrecipeitemBinding)
+        inner class ViewHolder(binding:RecipeitemBinding)
             :RecyclerView.ViewHolder(binding.root){
 
-            val image = binding.itemMyRecipeIv1
-            val text = binding.itemMyRecipeText
+            val image = binding.itemRecipeIv1
+            val text = binding.itemRecipeText
+
+
+
+
 
             }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(MyrecipeitemBinding.inflate(LayoutInflater.from(parent.context),parent,false))
+        return ViewHolder(RecipeitemBinding.inflate(LayoutInflater.from(parent.context),parent,false))
     }
 
     override fun getItemCount(): Int {

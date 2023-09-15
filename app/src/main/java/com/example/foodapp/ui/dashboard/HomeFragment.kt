@@ -2,23 +2,18 @@ package com.example.foodapp.ui.dashboard
 
 import android.content.Context
 import android.content.Intent
-import android.opengl.Visibility
 import android.os.Bundle
 import android.view.*
-import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toolbar
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.foodapp.*
+import com.example.foodapp.activities.AddRecipeActivity
+import com.example.foodapp.adapters.RecipeAdapter
 
 import com.example.foodapp.databinding.FragmentHomeBinding
-import kotlinx.android.synthetic.main.activity_register.*
+import com.example.foodapp.models.Recipe
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : BaseFragment() {
@@ -66,7 +61,7 @@ class HomeFragment : BaseFragment() {
 
         home_add.setOnClickListener{
 
-            val intent = Intent(activity,AddRecipeActivity::class.java)
+            val intent = Intent(activity, AddRecipeActivity::class.java)
             startActivity(intent)
 
         }

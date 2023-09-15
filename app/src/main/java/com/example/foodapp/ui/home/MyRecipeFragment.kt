@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.foodapp.*
+import com.example.foodapp.adapters.MyRecipeAdapter
 import com.example.foodapp.databinding.FragmentMyrecipeBinding
+import com.example.foodapp.models.Recipe
 
 import kotlinx.android.synthetic.main.fragment_myrecipe.*
 

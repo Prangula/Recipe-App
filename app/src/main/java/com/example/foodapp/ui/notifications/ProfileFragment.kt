@@ -5,19 +5,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.example.foodapp.*
+import com.example.foodapp.activities.LoginActivity
 import com.example.foodapp.databinding.FragmentProfileBinding
+import com.example.foodapp.models.Users1
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.auth.User
 import kotlinx.android.synthetic.main.fragment_profile.*
 
 class ProfileFragment : BaseFragment() {
 
-    private var detail:Users1= Users1()
+    private var detail: Users1 = Users1()
     private var _binding:FragmentProfileBinding? = null
     private val binding get() = _binding!!
 
@@ -88,7 +87,7 @@ class ProfileFragment : BaseFragment() {
         profile_sign_out1.setOnClickListener {
 
             FirebaseAuth.getInstance().signOut()
-            val intent = Intent(activity,LoginActivity::class.java)
+            val intent = Intent(activity, LoginActivity::class.java)
             intent.flags =Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(intent)
 

@@ -1,8 +1,11 @@
-package com.example.foodapp
+package com.example.foodapp.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
+import com.example.foodapp.Constants
+import com.example.foodapp.FirestoreClass
+import com.example.foodapp.R
+import com.example.foodapp.models.Recipe
 import kotlinx.android.synthetic.main.activity_detail.*
 
 class DetailActivity : BaseActivity() {

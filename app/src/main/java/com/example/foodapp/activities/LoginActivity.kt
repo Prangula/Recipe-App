@@ -1,9 +1,12 @@
-package com.example.foodapp
+package com.example.foodapp.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.foodapp.Constants
+import com.example.foodapp.FirestoreClass
+import com.example.foodapp.R
+import com.example.foodapp.models.Users1
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -15,14 +18,14 @@ class LoginActivity : BaseActivity() {
 
         login_register.setOnClickListener {
 
-            val intent = Intent(this,RegisterActivity::class.java)
+            val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
 
         }
 
         forgot_password.setOnClickListener {
 
-            val intent = Intent(this,ForgotPasswordActivity::class.java)
+            val intent = Intent(this, ForgotPasswordActivity::class.java)
             startActivity(intent)
 
        }
@@ -66,10 +69,10 @@ class LoginActivity : BaseActivity() {
 
     }
 
-    fun logInSuccess(users:Users1){
+    fun logInSuccess(users: Users1){
 
         hideDialog()
-        val intent = Intent(this,NavigationActivity::class.java)
+        val intent = Intent(this, NavigationActivity::class.java)
         intent.putExtra(Constants.DETAIL,users)
         startActivity(intent)
         finish()
