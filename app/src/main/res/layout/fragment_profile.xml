@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    tools:context=".ui.notifications.ProfileFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_profile"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        app:title=""
+        app:titleTextColor="@color/black"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="პროფილი"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+
+            />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_iv"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        tools:src="@drawable/ludi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_profile"
+        android:layout_marginTop="40dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/profile_n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="სახელი :"
+        android:layout_marginStart="20dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_iv"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="ლუკა"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/profile_n"
+        app:layout_constraintTop_toBottomOf="@id/profile_iv"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/profile_s"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="გვარი :"
+        android:layout_marginStart="20dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_n"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/profile_surname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="ლუკა"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/profile_s"
+        app:layout_constraintTop_toBottomOf="@id/profile_n"
+        android:layout_marginTop="20dp"
+        />
+
+
+    <TextView
+        android:id="@+id/profile_e"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="მეილი :"
+        android:layout_marginStart="20dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_s"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/profile_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="ლუკა"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/profile_e"
+        app:layout_constraintTop_toBottomOf="@id/profile_s"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/profile_m"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="მობილური :"
+        android:layout_marginStart="20dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_e"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/profile_mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="ლუკა"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/profile_m"
+        app:layout_constraintTop_toBottomOf="@id/profile_e"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/profile_g"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="სქესი :"
+        android:layout_marginStart="20dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_m"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/profile_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="ლუკა"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/profile_g"
+        app:layout_constraintTop_toBottomOf="@id/profile_m"
+        android:layout_marginTop="20dp"
+        />
+
+    <android.widget.Button
+        android:id="@+id/profile_sign_out1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="40dp"
+        android:text="გამოსვლა"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/profile_gender"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/login_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/aaa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_sign_out1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

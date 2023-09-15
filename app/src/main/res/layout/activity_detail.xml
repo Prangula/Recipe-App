@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    tools:context=".DetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_detail"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                app:title=""
+                app:titleTextColor="@color/black"
+                tools:ignore="MissingConstraints">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="რეცეპტი"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+
+                    />
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+            <TextView
+                android:id="@+id/detail_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="5dp"
+                tools:text="ზღვის პროდუქტები"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/toolbar_detail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/detail_iv"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/detail_iv"
+                android:layout_width="350dp"
+                android:layout_height="350dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                tools:src="@drawable/ludi"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detail_title" />
+
+
+            <TextView
+                android:id="@+id/detail_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="5dp"
+                tools:text="ზღვის პროდუქტები"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/detail_iv"
+                app:layout_constraintStart_toStartOf="parent"
+
+                />
+
+            <TextView
+                android:id="@+id/detail_time"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                tools:text="24წთ"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/detail_iv"
+                app:layout_constraintStart_toEndOf="@id/detail_category"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                />
+
+
+            <TextView
+                android:id="@+id/text30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="სირთულე : "
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detail_category"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                />
+
+
+            <TextView
+                android:id="@+id/detail_difficulty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="5dp"
+                tools:text="მარტივი"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/text30"
+                app:layout_constraintStart_toStartOf="parent"
+
+                />
+
+            <TextView
+                android:id="@+id/text80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ინგრედიენტები : "
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detail_difficulty"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                />
+
+
+            <TextView
+                android:id="@+id/detail_ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="5dp"
+                tools:text="ხახვი"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/text80"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="20dp"
+
+
+                />
+
+            <TextView
+                android:id="@+id/text88"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="მომზადების წესი : "
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detail_ingredients"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                />
+
+
+            <TextView
+                android:id="@+id/detail_howto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="20dp"
+                tools:text="ხახვი"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@id/text88"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="20dp"
+
+                />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

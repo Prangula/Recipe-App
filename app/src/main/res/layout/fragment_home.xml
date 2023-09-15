@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    tools:context=".ui.dashboard.HomeFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_home"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        app:titleTextColor="@color/black"
+        tools:ignore="MissingConstraints">
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="მთავარი"
+    android:textColor="@color/black"
+    android:textSize="20sp"
+    android:textStyle="bold"
+
+    />
+</androidx.appcompat.widget.Toolbar>
+
+
+    <EditText
+        android:id="@+id/home_et"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_home"
+        app:layout_constraintBottom_toTopOf="@id/horizontal"
+        android:background="@drawable/et"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="მოძებნე სასურველი კერძის რეცეპტი"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:paddingStart="10dp"
+        android:drawableEnd="@drawable/baseline_search_24"
+        android:paddingEnd="10dp"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_et"
+        app:layout_constraintBottom_toTopOf="@id/recyclerView"
+        android:layout_marginTop="20dp"
+        >
+
+
+
+   <RadioGroup
+       android:id="@+id/home_radioGroup"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:layout_marginStart="10dp"
+       android:layout_marginEnd="10dp"
+       >
+
+
+       <RadioButton
+           android:id="@+id/home_yvela"
+           android:layout_width="120dp"
+           android:layout_height="40dp"
+           android:checked="true"
+           android:button="@null"
+           android:background="@drawable/gender"
+           android:textColor="@drawable/gendertext"
+           android:text="ყველა"
+           android:textSize="16sp"
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:layout_marginEnd="5dp"
+           />
+
+       <RadioButton
+           android:id="@+id/home_xorceuli"
+           android:layout_width="120dp"
+           android:layout_height="40dp"
+           android:checked="false"
+           android:button="@null"
+           android:background="@drawable/gender"
+           android:textColor="@drawable/gendertext"
+           android:text="ხორცეული"
+           android:textSize="16sp"
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:layout_marginEnd="5dp"
+           />
+
+       <RadioButton
+           android:id="@+id/home_deserti"
+           android:layout_width="120dp"
+           android:layout_height="40dp"
+           android:checked="false"
+           android:button="@null"
+           android:background="@drawable/gender"
+           android:textColor="@drawable/gendertext"
+           android:text="დესერტი"
+           android:textSize="16sp"
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:layout_marginEnd="5dp"
+           />
+
+       <RadioButton
+           android:id="@+id/home_comeuli"
+           android:layout_width="120dp"
+           android:layout_height="40dp"
+           android:checked="false"
+           android:button="@null"
+           android:background="@drawable/gender"
+           android:textColor="@drawable/gendertext"
+           android:text="ცომეული"
+           android:textSize="16sp"
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:layout_marginEnd="5dp"
+           />
+
+       <RadioButton
+           android:id="@+id/home_pasta"
+           android:layout_width="120dp"
+           android:layout_height="40dp"
+           android:checked="false"
+           android:button="@null"
+           android:background="@drawable/gender"
+           android:textColor="@drawable/gendertext"
+           android:text="პასტა"
+           android:textSize="16sp"
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:layout_marginEnd="5dp"
+           />
+
+       <RadioButton
+           android:id="@+id/home_zgvis_produqtebi"
+           android:layout_width="190dp"
+           android:layout_height="40dp"
+           android:checked="false"
+           android:button="@null"
+           android:background="@drawable/gender"
+           android:textColor="@drawable/gendertext"
+           android:text="ზღვის პროდუქტები"
+           android:textSize="16sp"
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:layout_marginEnd="5dp"
+           />
+
+       <RadioButton
+           android:id="@+id/home_bostneuli"
+           android:layout_width="120dp"
+           android:layout_height="40dp"
+           android:checked="false"
+           android:button="@null"
+           android:background="@drawable/gender"
+           android:textColor="@drawable/gendertext"
+           android:text="ბოსტნეული"
+           android:textSize="16sp"
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:layout_marginEnd="5dp"
+           />
+
+       <RadioButton
+           android:id="@+id/home_wvniani"
+           android:layout_width="120dp"
+           android:layout_height="40dp"
+           android:checked="false"
+           android:button="@null"
+           android:background="@drawable/gender"
+           android:textColor="@drawable/gendertext"
+           android:text="წვნიანი"
+           android:textSize="16sp"
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:layout_marginEnd="5dp"
+           />
+
+       <RadioButton
+           android:id="@+id/home_salatebi"
+           android:layout_width="120dp"
+           android:layout_height="40dp"
+           android:checked="false"
+           android:button="@null"
+           android:background="@drawable/gender"
+           android:textColor="@drawable/gendertext"
+           android:text="სალათები"
+           android:textSize="16sp"
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:layout_marginEnd="5dp"
+           />
+
+       <RadioButton
+           android:id="@+id/home_sousebi"
+           android:layout_width="120dp"
+           android:layout_height="40dp"
+           android:checked="false"
+           android:button="@null"
+           android:background="@drawable/gender"
+           android:textColor="@drawable/gendertext"
+           android:text="სოუსები"
+           android:textSize="16sp"
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:layout_marginEnd="15dp"
+           />
+
+
+   </RadioGroup>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/horizontal"
+        app:layout_constraintBottom_toTopOf="@id/home_add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/home_text_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="რეცეპტი ვერ მოიძებნა"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontal"
+        app:layout_constraintBottom_toTopOf="@id/home_add"
+
+        />
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/home_add"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/baseline_add_24"
+        android:backgroundTint="@color/white"
+        >
+
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+    
+    
+
+</androidx.constraintlayout.widget.ConstraintLayout>

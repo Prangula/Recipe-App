@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+     android:oneshot="false" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:duration="200"
+        android:drawable="@drawable/all"
+        />
+
+    <item android:duration="200"
+        android:drawable="@drawable/burger"
+        />
+
+    <item android:duration="200"
+        android:drawable="@drawable/drinks"
+        />
+
+    <item android:duration="200"
+        android:drawable="@drawable/hotdog"
+        />
+
+    <item android:duration="200"
+        android:drawable="@drawable/pizza"
+        />
+
+    <item android:duration="200"
+        android:drawable="@drawable/seafood"
+        />
+
+</animation-list>
