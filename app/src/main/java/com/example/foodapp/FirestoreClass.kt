@@ -194,6 +194,25 @@ class FirestoreClass {
             }
     }
 
+    fun deleteMyRecipe(fragment:Fragment,recipe_id:String){
+
+        fireStore.collection(Constants.RECIPES)
+            .document(recipe_id)
+            .delete()
+            .addOnSuccessListener {
+
+                when(fragment){
+
+                    is MyRecipeFragment->{
+
+                        fragment.deleteSuccess()
+                    }
+                }
+
+            }
+
+    }
+
 
     fun uploadImageToCloudStorage(activity: Activity, imageUri: Uri, imageType:String){
 

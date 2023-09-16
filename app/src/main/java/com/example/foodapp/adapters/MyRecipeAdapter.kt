@@ -50,6 +50,14 @@ class MyRecipeAdapter(private val items:ArrayList<Recipe>,
 
         }
 
+        holder.itemView.setOnLongClickListener {
+
+            fragment.deleteNews(item.recipe_id)
+            true
+        }
+
+
+
     }
 }
 

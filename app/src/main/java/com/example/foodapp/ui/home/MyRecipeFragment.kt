@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.foodapp.*
@@ -73,6 +74,52 @@ class MyRecipeFragment : BaseFragment() {
 
         showDialog1()
         FirestoreClass().getMyRecipe(this@MyRecipeFragment)
+    }
+
+    fun deleteNews(recipe_id: String){
+
+        alertDelete(recipe_id)
+
+    }
+
+    fun deleteSuccess(){
+
+        hideDialog1()
+        getMyRecipe()
+
+    }
+
+    private fun alertDelete(recipe_id:String){
+
+        val builder =AlertDialog.Builder(requireActivity())
+
+        builder.setTitle("რეცეპტის წაშლა")
+        builder.setIcon(android.R.drawable.ic_dialog_alert)
+        builder.setMessage("დარწმუნებული ხართ რომ გსურთ თქვენი რეცეპტის წაშლა?")
+
+
+
+        builder.setPositiveButton("დიახ"){dialogInterface,_->
+
+
+            showDialog1()
+            FirestoreClass().deleteMyRecipe(this@MyRecipeFragment,recipe_id)
+            dialogInterface.dismiss()
+
+
+
+        }
+        builder.setNegativeButton("არა"){dialogInterface,_->
+
+            dialogInterface.dismiss()
+
+        }
+
+        val alertDialog = builder.create()
+        alertDialog.setCancelable(false)
+        alertDialog.show()
+
+
     }
 
     override fun onResume() {

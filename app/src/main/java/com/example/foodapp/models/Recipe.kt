@@ -2,6 +2,7 @@ package com.example.foodapp.models
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
+import java.util.Date
 
 @Parcelize
 data class Recipe(
@@ -16,6 +17,7 @@ data class Recipe(
     val uploader:String = "",
     val uploaderImage:String = "",
     val userId:String = "",
-    var recipe_id:String = ""
+    var recipe_id:String = "",
+    var date:Date = Date()
 
 ):Parcelable

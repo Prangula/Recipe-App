@@ -15,12 +15,14 @@ import com.example.foodapp.adapters.RecipeAdapter
 import com.example.foodapp.databinding.FragmentHomeBinding
 import com.example.foodapp.models.Recipe
 import kotlinx.android.synthetic.main.fragment_home.*
+import java.util.Date
 
 class HomeFragment : BaseFragment() {
 
 
     private var _binding: FragmentHomeBinding? = null
     private var selectedCategory: String = "ყველა" // Default category
+
 
 
 
@@ -147,12 +149,14 @@ class HomeFragment : BaseFragment() {
 
             }
 
+       val sort = filter1.sortedByDescending {it.date}
+
 
         if(items.size>0){
 
             hideDialog1()
 
-            val adapter = RecipeAdapter(ArrayList(filter1),this@HomeFragment)
+            val adapter = RecipeAdapter(ArrayList(sort),this@HomeFragment)
             recyclerView.adapter = adapter
             recyclerView.layoutManager = GridLayoutManager(activity,2)
             home_text_no.visibility = View.GONE

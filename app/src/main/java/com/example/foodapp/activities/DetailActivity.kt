@@ -58,6 +58,12 @@ class DetailActivity : BaseActivity() {
             .with(this)
             .load(recipe.image)
             .into(detail_iv)
+        Glide
+            .with(this)
+            .load(recipe.uploaderImage)
+            .into(detail_iv_uploader)
+
+        detail_uploader_name.text = recipe.uploader
         detail_category.text = recipe.category
         detail_time.text = recipe.time
         detail_difficulty.text = recipe.difficulty
