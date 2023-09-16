@@ -7,6 +7,17 @@
     android:background="@color/yellow"
     tools:context=".ui.notifications.ProfileFragment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_profile"
         android:layout_width="match_parent"
@@ -180,16 +191,32 @@
         />
 
     <android.widget.Button
-        android:id="@+id/profile_sign_out1"
+        android:id="@+id/profile_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/button"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="40dp"
-        android:text="გამოსვლა"
+        android:text="პროფილის განახლება"
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@id/profile_gender"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="10dp"
+        />
+
+    <android.widget.Button
+        android:id="@+id/profile_sign_out1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        android:text="გამოსვლა"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/profile_update"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="10dp"
@@ -198,7 +225,7 @@
     <ImageView
         android:id="@+id/login_iv"
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:src="@drawable/aaa"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -207,7 +234,11 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
         />
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

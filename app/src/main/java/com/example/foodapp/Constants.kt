@@ -9,6 +9,7 @@ object Constants {
     const val USERS = "Users"
     const val DETAIL = "detail"
     const val IMAGE = "image" // CLOUDSTORAGE
+    const val IMAGEUPDATE = "imageUpdate"
 
 
     const val RECIPES = "Recipes"

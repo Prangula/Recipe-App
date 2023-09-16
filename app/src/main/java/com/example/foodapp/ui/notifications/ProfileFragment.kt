@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.example.foodapp.*
 import com.example.foodapp.activities.LoginActivity
+import com.example.foodapp.activities.UpdateActivity
 import com.example.foodapp.databinding.FragmentProfileBinding
 import com.example.foodapp.models.Users1
 import com.google.firebase.auth.FirebaseAuth
@@ -91,6 +92,14 @@ class ProfileFragment : BaseFragment() {
             intent.flags =Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(intent)
 
+
+        }
+
+        profile_update.setOnClickListener {
+
+            val intent = Intent(activity,UpdateActivity::class.java)
+            intent.putExtra(Constants.DETAIL,detail)
+            startActivity(intent)
 
         }
 

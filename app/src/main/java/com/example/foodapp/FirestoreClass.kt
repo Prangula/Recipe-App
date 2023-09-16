@@ -7,10 +7,7 @@ import android.content.SharedPreferences
 import android.net.Uri
 import android.util.Log
 import androidx.fragment.app.Fragment
-import com.example.foodapp.activities.AddRecipeActivity
-import com.example.foodapp.activities.DetailActivity
-import com.example.foodapp.activities.LoginActivity
-import com.example.foodapp.activities.RegisterActivity
+import com.example.foodapp.activities.*
 import com.example.foodapp.models.Recipe
 import com.example.foodapp.models.Users1
 import com.example.foodapp.ui.dashboard.HomeFragment
@@ -214,6 +211,30 @@ class FirestoreClass {
     }
 
 
+   fun updateProfile(activity: Activity,hashMap: HashMap<String,Any>){
+       fireStore.collection(Constants.USERS)
+           .document(getCurrentUserId())
+           .update(hashMap)
+           .addOnSuccessListener {
+
+               when(activity){
+
+                   is UpdateActivity->{
+
+                       activity.updateSuccess()
+                   }
+               }
+
+
+           }
+
+
+
+   }
+
+
+
+
     fun uploadImageToCloudStorage(activity: Activity, imageUri: Uri, imageType:String){
 
         val sRef: StorageReference = FirebaseStorage.getInstance().reference.child(
@@ -244,6 +265,10 @@ class FirestoreClass {
 
                             is AddRecipeActivity ->{
 
+                                activity.imageUploadSuccess(uri.toString())
+                            }
+
+                            is UpdateActivity->{
                                 activity.imageUploadSuccess(uri.toString())
                             }
 

@@ -380,7 +380,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/c"
-                android:layout_width="match_parent"
+                android:layout_width="400dp"
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:layout_constraintStart_toStartOf="parent"
@@ -398,7 +398,7 @@
 
                 <EditText
                     android:id="@+id/recipe_ingredientebi"
-                    android:layout_width="match_parent"
+                    android:layout_width="400dp"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
                     android:textColor="@color/black"
@@ -412,7 +412,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/d"
-                android:layout_width="match_parent"
+                android:layout_width="400dp"
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:layout_constraintStart_toStartOf="parent"
@@ -431,7 +431,7 @@
 
                 <EditText
                     android:id="@+id/recipe_momzadebis_wesi"
-                    android:layout_width="match_parent"
+                    android:layout_width="400dp"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
                     android:textColor="@color/black"

@@ -1,6 +1,8 @@
 package com.example.foodapp.models
 
+import android.graphics.Color
 import android.os.Parcelable
+import com.example.foodapp.R
 import kotlinx.android.parcel.Parcelize
 import java.util.Date
 
@@ -18,6 +20,8 @@ data class Recipe(
     val uploaderImage:String = "",
     val userId:String = "",
     var recipe_id:String = "",
-    var date:Date = Date()
+    var date:Date = Date(),
+
+
 
 ):Parcelable
