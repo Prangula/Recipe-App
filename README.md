@@ -1,0 +1,1 @@
+"I developed a Recipe Android app incorporating Firebase Cloud services for real-time data updates, authentication, and cloud storage. This project expanded my knowledge of utilizing Firebase features to build secure and dynamic mobile applications."
